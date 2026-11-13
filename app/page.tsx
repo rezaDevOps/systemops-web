@@ -139,7 +139,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--rule" aria-labelledby="why-title">
+      <section className="section section--rule section--surface" aria-labelledby="why-title">
         <div className="container split">
           <div>
             <h2 id="why-title" className="section__title">

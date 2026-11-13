@@ -105,7 +105,7 @@ export default function CloudPilotPage() {
         </div>
       </section>
 
-      <section className="section section--rule" aria-labelledby="how-title">
+      <section className="section section--rule section--surface" aria-labelledby="how-title">
         <div className="container">
           <h2 id="how-title" className="section__title">
             How it works
