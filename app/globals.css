@@ -966,11 +966,85 @@ main {
   color: var(--ink-soft);
 }
 
-/* ---------- 404 + legal placeholders ---------- */
-.legal,
+/* ---------- 404 ---------- */
 .not-found {
   display: grid;
   gap: 1.25rem;
   justify-items: start;
   padding-block: var(--section-space);
+}
+
+/* ---------- Legal pages (Impressum, Datenschutz) ---------- */
+.legal {
+  padding-block: clamp(3rem, 2rem + 4vw, 5.5rem) var(--section-space);
+  color: var(--ink-soft);
+  overflow-wrap: break-word;
+}
+
+/* long German compounds need hyphenation only on narrow screens */
+@media (max-width: 560px) {
+  .legal {
+    hyphens: auto;
+  }
+}
+
+.legal > * {
+  max-width: 42rem;
+}
+
+.legal__title {
+  font-size: var(--step-4);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+
+.legal h2 {
+  font-size: var(--step-1);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal p,
+.legal address,
+.legal ul {
+  margin-bottom: 1rem;
+}
+
+.legal address {
+  font-style: normal;
+}
+
+.legal ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.legal li + li {
+  margin-top: 0.25rem;
+}
+
+.legal li::marker {
+  color: var(--muted);
+}
+
+.legal a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+.legal a:hover {
+  color: var(--accent-hover);
+}
+
+.legal__date {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
 }
